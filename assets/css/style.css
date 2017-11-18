@@ -1,0 +1,114 @@
+
+
+body {
+  background-color: grey;
+  font-family: Helvetica;
+  color:pink;
+  height:100%;
+  text-align:center;
+  font-size:26px;
+}
+
+img {
+	text-align: center;
+}
+
+h2, {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+  	margin:5px 0;
+  	font-size: 10px;
+}
+
+p{
+  font-size: 20px;
+  margin: 4 0 10px;
+}
+
+#alphabet {
+
+  margin:15px auto;
+  padding:0;
+  max-width:900px;
+
+}
+
+#alphabet li {
+  float:left;
+  margin: 0 10px 20px 0;
+  list-style:none;
+  width:35px;
+  height:35px;
+  padding-top:5px;
+  background:$white;
+  cursor:pointer;
+  border: solid 1px pink;
+    
+    &:hover{
+      background:$base-color;
+      border: solid 1px $white;
+      color:red;
+    }
+}
+
+#my-word {
+  margin: 0;
+  display: block;
+  padding: 0;
+  display:block;
+}
+
+#my-word li {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  display: inline-block;
+  padding: 0 10px;
+  font-size:1.6em;
+}
+
+.active {
+  @include opacity;
+  cursor:default;
+    
+  &:hover{
+      @include fade;
+      @include opacity;
+    }
+}
+
+#mylives{
+  font-size: 30px;
+  text-align:center;
+  display:block;
+  color: pink;
+}
+
+button{
+  color:$white;
+  border: solid 1px $white;
+  cursor:pointer;
+  font-size:1.2em;
+  padding:18px 10px;
+  width:180px;
+  margin: 10px;
+  outline: none;
+  
+    &:hover{
+      @include transition;
+      background:yellow;
+      border: solid 1px yellow;
+    }
+}
+
+@media (max-width: 767px) {
+  #alphabet {
+  padding:0 0 0 15px;
+}
+  }
+
+  @media (max-width: 480px) {
+  #alphabet {
+  padding:0 0 0 25px;
+}
+  }
